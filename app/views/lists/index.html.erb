@@ -1,8 +1,8 @@
-<% citystates = [["New York", ["NYC","Albany, Syracuse"]], ["Connecticut", ["Stamford","Hartford"]], ["New Jersey", ["Trenton","Jersey City"]]]%>
+<% citystates = [["New York", ["NYC","Albany", "Syracuse"]], ["Connecticut", ["Stamford","Hartford"]], ["New Jersey", ["Trenton","Jersey City"]]]%>
 
 
 <h1 style="font-size: 48px">City States </h1>
-
+    <div class="container container-fluid">
       <% citystates.each do |state, cities| %>
         <h2 style="font-size: 36px"><%= state %></h2>
         <ul>
@@ -11,3 +11,4 @@
           <% end %>
         </ul>
       <% end %>
+    </div>
