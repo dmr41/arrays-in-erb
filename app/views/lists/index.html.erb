@@ -1,19 +1,13 @@
-<% states_var = ["New York", "Connecticut", "New Jersey"] %>
-<% cities_var = ["New York City", "Stamford", "Jersey City","Hartford", "Trenton","Albany"] %>
+<% citystates = [["New York", ["NYC","Albany, Syracuse"]], ["Connecticut", ["Stamford","Hartford"]], ["New Jersey", ["Trenton","Jersey City"]]]%>
 
 
+<h1 style="font-size: 48px">City States </h1>
 
-<h1 style="font-size: 48px">States</h1>
-  <ul>
-    <% states_var.each do |state| %>
-    <li style="font-size: 36px"><%= state %></li>
-    <% end %>
-  </ul>
-
-
-<h1 style="font-size: 48px">Cities </h1>
-  <ul>
-    <% cities_var.each do |city| %>
-    <li style="font-size: 36px"><%= city %></li>
-    <% end %>
-  </ul>
+      <% citystates.each do |state, cities| %>
+        <h2 style="font-size: 36px"><%= state %></h2>
+        <ul>
+          <% cities.each do |city| %>
+            <li><%= city%></li>
+          <% end %>
+        </ul>
+      <% end %>
